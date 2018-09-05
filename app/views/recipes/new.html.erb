@@ -1,0 +1,32 @@
+<h1>Cadastrar Nova Receita</h1>
+
+<%= form_for(Recipe.new) do |f| %>
+  <div>
+  <%= f.label :title, "Título"%>
+  <%= f.text_field :title %>
+  </div>
+  <div>
+  <%= f.label :title, "Tipo da Recetita"%>
+  <%= f.text_field :recipe_type %>
+  </div>
+  <div>
+  <%= f.label :title, "Cozinha"%>
+  <%= f.text_field :cuisine %>
+  </div>
+  <div>
+  <%= f.label :title, "Dificuldade"%>
+  <%= f.text_field :difficulty %>
+  </div>
+  <div>
+  <%= f.label :title, "Tempo de Preparo"%>
+  <%= f.text_field :cook_time %>
+  </div>
+  <div>
+  <%= f.label :title, "Ingredientes"%>
+  <%= f.text_area :ingredients %>
+  </div>
+  <div>
+  <%= f.label :title, "Como Prepara"%>
+  <%= f.text_field :cook_method %>
+  </div>
+<% end %>
