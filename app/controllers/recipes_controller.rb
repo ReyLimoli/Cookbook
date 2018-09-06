@@ -14,9 +14,29 @@ class RecipesController < ApplicationController
                                                          :cook_time, :ingredients,
                                                          :cook_method) 
         # criar a receita em si
-        recipe = Recipe.create(recipe_params)
+        @recipe = Recipe.create(recipe_params)
 
         #redirecionar para a receite recem criada
-        redirect_to recipe_path(recipe.id)
+        redirect_to recipe_path(@recipe.id)
+    end
+
+    def edit
+        id = params[:id]
+        @recipe = Recipe.find(id)        
+    end
+
+    def update
+        # receber os dados do formulário
+        recipe_params = params.require(:recipe).permit(:title, :recipe_type,
+                                                         :cuisine, :difficulty,
+                                                         :cook_time, :ingredients,
+                                                         :cook_method) 
+        # atualiza a receita em si
+        id = params[:id]
+        @recipe = Recipe.find(id)
+        @recipe.update(recipe_params)
+
+        #redirecionar para a receite recem atualizada
+        redirect_to recipe_path(@recipe.id)
     end
 end
