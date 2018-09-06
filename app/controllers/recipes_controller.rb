@@ -12,12 +12,15 @@ class RecipesController < ApplicationController
         recipe_params = params.require(:recipe).permit(:title, :recipe_type,
                                                          :cuisine, :difficulty,
                                                          :cook_time, :ingredients,
-                                                         :cook_method) 
+                                                         :cook_method)
         # criar a receita em si
-        @recipe = Recipe.create(recipe_params)
-
-        #redirecionar para a receite recem criada
-        redirect_to recipe_path(@recipe.id)
+        @recipe = Recipe.new(recipe_params)
+        if (@recipe.save)        
+            #redirecionar para a receite recem criada
+            redirect_to recipe_path(@recipe.id)
+        else
+            render 'new'
+        end
     end
 
     def edit
@@ -34,9 +37,11 @@ class RecipesController < ApplicationController
         # atualiza a receita em si
         id = params[:id]
         @recipe = Recipe.find(id)
-        @recipe.update(recipe_params)
-
-        #redirecionar para a receite recem atualizada
-        redirect_to recipe_path(@recipe.id)
+        if(@recipe.update(recipe_params))
+            #redirecionar para a receite recem atualizada
+            redirect_to recipe_path(@recipe.id)
+        else
+        render 'edit'
+        end
     end
 end

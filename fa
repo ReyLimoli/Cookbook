@@ -1,0 +1,29 @@
+[33mcommit 00b4dd83b7f613acdc275f927bdedf6ae783dd28[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Reynaldo Limoli <reynaldo.limoli@gmail.com>
+Date:   Thu Sep 6 19:19:52 2018 -0300
+
+    Usuário edita uma receita
+
+[33mcommit ee8e454968a49ccb052f2b21e19afe673d4f7d6b[m
+Author: Reynaldo Limoli <reynaldo.limoli@gmail.com>
+Date:   Wed Sep 5 16:11:18 2018 -0300
+
+    Visitante cadastra suas receitas
+
+[33mcommit 18d6568167443182e9f1b224fa9bbddb5a131c08[m
+Author: Reynaldo Limoli <reynaldo.limoli@gmail.com>
+Date:   Wed Sep 5 14:58:34 2018 -0300
+
+    Visitante visualiza detalhes de uma receita
+
+[33mcommit 208f9faafc0e6cbd1a86dd8d462319b0fea9351e[m
+Author: Reynaldo Limoli <reynaldo.limoli@gmail.com>
+Date:   Tue Sep 4 20:33:49 2018 -0300
+
+    visitante visualiza receitas
+
+[33mcommit 1fc96886a572bd4b1d51ecf66a5c66d9d77019b8[m
+Author: Reynaldo Limoli <reynaldo.limoli@gmail.com>
+Date:   Tue Sep 4 18:54:52 2018 -0300
+
+    Setup inicial do projeto
